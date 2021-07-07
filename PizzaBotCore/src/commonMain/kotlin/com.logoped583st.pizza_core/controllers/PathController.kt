@@ -4,8 +4,8 @@ import com.logoped583st.pizza_core.interactors.PathInteractor
 import com.logoped583st.pizza_core.models.MatrixPathModel
 import com.logoped583st.pizza_core.models.PathModel
 import com.logoped583st.pizza_core.utils.PathFormatter
-import org.koin.core.KoinComponent
-import org.koin.core.inject
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 
 interface PathController {
     @Throws(Exception::class)

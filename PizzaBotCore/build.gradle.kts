@@ -11,12 +11,24 @@ group = "com.logoped583st"
 version = "1.0-SNAPSHOT"
 
 kotlin {
+    targets.all {
+        compilations.all {
+            kotlinOptions {
+                allWarningsAsErrors = true
+            }
+        }
+    }
+
     jvm {
         compilations.all {
             kotlinOptions.jvmTarget = "1.8"
         }
     }
-    android()
+    android{
+        compilations.all {
+            kotlinOptions.jvmTarget = "1.8"
+        }
+    }
     ios {
         binaries {
             framework {
@@ -29,9 +41,10 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation("org.koin:koin-core:3.0.0-alpha-4")
+                implementation("io.insert-koin:koin-core:3.1.2")
             }
         }
+
 
         val androidTest by getting {
             dependencies {
@@ -47,7 +60,7 @@ kotlin {
         }
         val iosMain by getting {
             dependencies {
-                implementation("org.koin:koin-core:3.0.0-alpha-4")
+                implementation("io.insert-koin:koin-core:3.1.2")
             }
         }
 

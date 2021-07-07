@@ -11,7 +11,7 @@ repositories {
 }
 
 object GradleBuild {
-    private const val kotlin_version = "1.4.0"
+    private const val kotlin_version = "1.5.20"
     private const val build_gradle_version = "4.0.1"
 
     const val kotlin_gradle_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -23,4 +23,9 @@ dependencies {
     implementation(build_gradle)
 }
 
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().all {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
 

@@ -8,7 +8,7 @@ version = "1.0-SNAPSHOT"
 dependencies {
     implementation(kotlin("stdlib"))
     implementation(project(":PizzaBotCore","jvmDefault"))
-    implementation("org.koin:koin-core:3.0.0-alpha-4")
+    implementation("io.insert-koin:koin-core:3.1.2")
 }
 
 tasks.withType<Jar> {

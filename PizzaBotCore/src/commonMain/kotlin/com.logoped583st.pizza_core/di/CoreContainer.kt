@@ -8,8 +8,8 @@ import com.logoped583st.pizza_core.mappers.PathOptimizer
 import com.logoped583st.pizza_core.mappers.PathOptimizerImpl
 import com.logoped583st.pizza_core.utils.PathFormatter
 import com.logoped583st.pizza_core.utils.PathFormatterImpl
-import org.koin.core.context.startKoin
 import org.koin.dsl.module
+import org.koin.core.context.startKoin
 
 private val coreModule = module {
     single<PathInteractor> { PathInteractorImpl(get()) }

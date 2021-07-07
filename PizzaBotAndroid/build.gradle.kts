@@ -10,7 +10,7 @@ version = "1.0-SNAPSHOT"
 
 dependencies {
     implementation(project(":PizzaBotCore"))
-    implementation("org.koin:koin-core:3.0.0-alpha-4")
+    implementation("io.insert-koin:koin-core-jvm:3.1.2")
 
     implementation("com.google.android.material:material:1.2.0")
     implementation("androidx.appcompat:appcompat:1.2.0")
@@ -18,7 +18,12 @@ dependencies {
 }
 android {
     setupAndroid()
-    defaultConfig {
-        applicationId = "com.logoped583st.androidApp"
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 }
